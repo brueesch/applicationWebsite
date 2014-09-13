@@ -70,7 +70,7 @@ h1 {
 
 nav {
     
-    padding: 40px 0;
+    padding: 40px 0 0 0;
     
     }
     nav ul {
@@ -108,7 +108,7 @@ nav {
 /* 3.2. Article */
 
 article {
-    margin: 10px auto 30px;
+    margin: 10px auto 20px;
     width: 800px;
 }
 
@@ -118,7 +118,7 @@ article {
 .page-wrap { width: 960px; margin: 60px auto; }
   
   
-#clear {
+.clear {
 	clear: both;
 }  
 
@@ -135,8 +135,8 @@ article {
 	font-size: larger;
 	border-bottom: solid;
 	border-bottom-width: 1px;
-	border-top: solid;
-	border-top-width: 1px;
+/* 	border-top: solid; */
+/* 	border-top-width: 1px; */
 	margin-bottom: 5px;
 	padding:2px 0;
 }
@@ -147,39 +147,79 @@ article {
     width: 600px;
     float: left;
     height: 600px;
+    padding-top: 10px;
+    
     }
-    #cv li p {
-    	margin:5px 0;
+    #cv p {
+    	margin:5px 5px;
+    	font-size: medium;
     }
 
-.cvLeft {
-	float:left;
+.cvLeftShort {
+	margin-right: 70px;	
 }
+
+.cvLeft, .cvLeftShort {
+	float:left;
+	}
+	.cvLeft p .cvLeftShort p{
+		font-style: italic;
+	}
+
 
 .cvRight {
-	float:right;
-	text-align:left;
-/* 	padding-left: 20px; */
-}
+	float:left;
+	padding-left: 20px
+	}
+	.cvRight p {
+		
+	}
 
 /* 4.2 Personal Data Styles */
 
+#rightContent {
+	float:left;
+}
+
 #personalData {
 	list-style: none;
-	float:left;
 	width: 180px;
     height: 600px;
     padding-left: 15px; 
+    
 }
 
 .pdLeft {
-	float:left;
+	font-weight: bolder;
+	font-size: medium;
+	margin:7px 0;
 }
 
 .pdRight {
-	float:right;
+	text-align: right;
+	font-size: medium;
+	font-style: italic;
 }
 
+
+/* 4.x Profile Picture */
+
+#profilePicture {
+	float:left;
+	min-height: 240px;
+	min-width: 250px;
+	margin-bottom: 25px;
+	}
+	#profilePicture img {
+		margin: 50px 0 0 -15px;
+		border = 0;
+		max-width: 240px;
+		-webkit-transform: rotate(270deg);
+    	-moz-transform: rotate(270deg);
+    	-o-transform: rotate(270deg);
+    	-ms-transform: rotate(270deg);
+    	transform: rotate(270deg);
+	}
  /* 4.2 Google Maps Styles */
  
  
