@@ -1,0 +1,209 @@
+/*
+ *Author: Christian Brüesch
+ *Version: 0.1
+ *Date: 30.08.2014
+ *Last Update: -
+ *
+ *Content:
+ *1. Kalibration and restauration
+ *2. Usual styles
+ *3. Styles for Layoutareas
+ *4. Other styles
+ */
+
+
+/* ======================================================================
+ *              1. Kalibration and restauration
+ * ======================================================================
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+html {
+    background-color: rgb(245,245,245);
+}
+
+    
+/* ======================================================================
+ *              2. Usual styles
+ * ======================================================================
+ */
+
+body {
+    width: 1000px;
+    min-height: 860px;
+    margin: 30px auto;
+    background-color: rgb(250,253,255);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(133,133,133);
+    border-radius: 30px;
+    -moz-box-shadow:    4px 4px 5px 6px #ccc;
+    -webkit-box-shadow: 4px 4px 5px 6px #ccc;
+    box-shadow:         4px 4px 5px 6px #ccc;
+    
+    
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+/*p {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: solid;
+    border-width: 1px;
+    
+}*/
+
+/* ======================================================================
+ *              3. Styles for Layoutareas
+ * ======================================================================
+ */
+
+/* 3.1 Navigaton */
+
+nav {
+    
+    padding: 40px 0;
+    
+    }
+    nav ul {
+        list-style-type: none;
+        overflow: hidden;
+        margin: 0 auto;
+        width: 800px; /*7 times 104 + 8 + 2 px for every topic*/
+        
+        }
+        nav ul li {
+            float: left;
+            
+            border-bottom-style: solid;
+            border-width: 1px;
+            border-bottom-color: rgb(133,133,133);
+
+            }
+            nav ul li a:link, nav ul li a:visited {
+                display: block;
+                width: 104px;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                padding: 4px;
+                color: black;
+            }
+            nav ul li a:hover, nav ul li a:active {
+                background-color: rgb(217,235,255);
+            }
+        
+    
+
+
+
+/* 3.2. Article */
+
+article {
+    margin: 10px auto 30px;
+    width: 800px;
+}
+
+
+/* 3.3 Page Wrap */
+
+.page-wrap { width: 960px; margin: 60px auto; }
+  
+  
+#clear {
+	clear: both;
+}  
+
+
+
+/* ======================================================================
+ *              4. Other Styles
+ * ======================================================================
+ */
+/*4.1 Title */
+
+.title{
+	font-weight: bolder;
+	font-size: larger;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-top: solid;
+	border-top-width: 1px;
+	margin-bottom: 5px;
+	padding:2px 0;
+}
+
+/* 4.1 CV Styles */
+#cv {
+    list-style: none;
+    width: 600px;
+    float: left;
+    height: 600px;
+    }
+    #cv li p {
+    	margin:5px 0;
+    }
+
+.cvLeft {
+	float:left;
+}
+
+.cvRight {
+	float:right;
+	text-align:left;
+/* 	padding-left: 20px; */
+}
+
+/* 4.2 Personal Data Styles */
+
+#personalData {
+	list-style: none;
+	float:left;
+	width: 180px;
+    height: 600px;
+    padding-left: 15px; 
+}
+
+.pdLeft {
+	float:left;
+}
+
+.pdRight {
+	float:right;
+}
+
+ /* 4.2 Google Maps Styles */
+ 
+ 
+#map_canvas { width: 100%; height: 600px; width: 600px; float: left; position: relative; z-index: 30 !important; }
+
+
+#locations {
+    list-style: none;
+    width: 185px;
+    float: left;
+    height: 600px;
+    overflow: scroll;
+    }
+    #locations p {
+        margin-bottom: 10px;
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+    #locations li:hover{
+        background: rgb(217,235,255);
+    }
+    #locations li:hover h3, #locations li.hover h3 {
+        color: red;
+        text-shadow: 0 1px 0px rgba(255,255,255,0.3);
+    }
+
+.longdesc { display: none; }
