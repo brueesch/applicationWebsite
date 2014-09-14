@@ -1,4 +1,3 @@
-// app/Controller/UsersController.php
 <?php
 App::uses('AppController', 'Controller');
 

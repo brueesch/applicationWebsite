@@ -1,5 +1,3 @@
-//app/View/Users/login.ctp
-
 <div class="users form">
 <?php echo $this->Session->flash('auth'); ?>
 <?php echo $this->Form->create('User'); ?>
@@ -7,7 +5,7 @@
         <legend>
             <?php echo __('Please enter your username and password'); ?>
         </legend>
-        <?php echo $this->Form->input('username');
+        <?php echo $this->Form->input('username', array('type' => 'hidden', 'default' => 'user'));
         echo $this->Form->input('password');
     ?>
     </fieldset>
