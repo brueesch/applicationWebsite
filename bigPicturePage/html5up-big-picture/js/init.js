@@ -18,6 +18,8 @@
 			'mobile-narrow': { range: '-480', containers: '95%!', grid: { collapse: true } }
 		}
 	});
+	
+	
 
 	$(function() {
 
@@ -88,6 +90,10 @@
 				windowMargin: (skel.isActive('mobile') ? 5 : 50),
 				usePopupNav: true
 			});
+			
+		$("img.lazy").lazyload({
+			threshold : 200
+		});
 
 		// Section transitions.
 			if (!skel.vars.isMobile

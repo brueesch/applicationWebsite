@@ -166,7 +166,6 @@
 				top: 0;
 				width: 100%;
 				height: 100%;
-				background: url('images/overlay.png');
 			}
 
 			.image img {
@@ -862,11 +861,11 @@
 /*********************************************************************************/
 
 	#intro {
-		background: url('images/overlay.png'), url('../images/intro.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
+		background: url('../images/intro.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: bottom center;
+		background-repeat: no-repeat;
 	}
 
 				
@@ -876,11 +875,11 @@
 /*********************************************************************************/
 
 	#america {
-		background: url('images/overlay.png'), url('../images/america.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
+		background:  url('../images/america.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: bottom center;
+		background-repeat: no-repeat;
 	}
 	
 		
@@ -935,11 +934,11 @@
 /*********************************************************************************/
 
 	#japan {
-		background: url('images/overlay.png'), url('../images/japan.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
+		background: url('../images/japan.jpg');
+		background-size:  cover;
+		background-attachment:  fixed;
+		background-position: bottom center;
+		background-repeat: no-repeat;
 	}
 	
 		
@@ -994,11 +993,11 @@
 /*********************************************************************************/
 
 	#malta {
-		background: url('images/overlay.png'), url('../images/malta.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
+		background: url('../images/malta.jpg');
+		background-size:  cover;
+		background-attachment: fixed;
+		background-position:  bottom center;
+		background-repeat:  no-repeat;
 	}
 	
 		
@@ -1053,11 +1052,11 @@
 /*********************************************************************************/
 
 	#rome {
-		background: url('images/overlay.png'), url('../images/rome.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
+		background: url('../images/rome.jpg');
+		background-size:  cover;
+		background-attachment: fixed;
+		background-position:  bottom center;
+		background-repeat: no-repeat;
 	}
 	
 		
@@ -1112,11 +1111,11 @@
 /*********************************************************************************/
 
 	#ireland {
-		background: url('images/overlay.png'), url('../images/ireland.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
+		background:  url('../images/ireland.jpg');
+		background-size:  cover;
+		background-attachment:  fixed;
+		background-position:  bottom center;
+		background-repeat: no-repeat;
 	}
 	
 		
@@ -1171,11 +1170,11 @@
 /*********************************************************************************/
 
 	#europe {
-		background: url('images/overlay.png'), url('../images/europe.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
+		background:  url('../images/europe.jpg');
+		background-size:  cover;
+		background-attachment: fixed;
+		background-position:  bottom center;
+		background-repeat:  no-repeat;
 	}
 	
 		
