@@ -110,18 +110,21 @@ public class SpeechRecognizer {
 		while (true) {
 
 			// while ((result = recognizer.getResult()) != null) {
-
+			//TODO: Just ONE Command
 			if (isButtonPressed()) {
 				result = recognizer.getResult();
-				String utterance = result.getHypothesis();
-				String[] words = utterance.split("\\s");
-				if (words.length >= 2) {
-					String firstWord = words[0];
-					String secoundWord = words[1];
-					utterance = convertNumbers(utterance);
-					Main.outputArea.append(utterance + "\n");
-					LOGGER.info(utterance);
-					determineCommand(utterance, firstWord, secoundWord);
+				if (isButtonPressed()) {
+					setButtonPressed(false);
+					String utterance = result.getHypothesis();
+					String[] words = utterance.split("\\s");
+					if (words.length >= 2) {
+						String firstWord = words[0];
+						String secoundWord = words[1];
+						utterance = convertNumbers(utterance);
+						Main.outputArea.append(utterance + "\n");
+						LOGGER.info(utterance);
+						determineCommand(utterance, firstWord, secoundWord);
+					}
 				}
 
 			}
