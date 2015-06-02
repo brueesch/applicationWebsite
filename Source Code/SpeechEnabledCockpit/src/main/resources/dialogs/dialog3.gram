@@ -1,0 +1,120 @@
+#JSGF V1.0;
+
+grammar dialog;
+
+<digit> = zero  |
+          one   |
+          two   |
+          three |
+          four  |
+          five  |
+          six   |
+          seven |
+          eight |
+          nine  ;
+
+<number> = <digit>+ [point <digit>+];
+
+<commands> = 	flaps (approach | up | full)													|
+				gear (up | down)																|
+				power <number>																	|
+				set (climb | cruise | take off | idle) power									|
+				(flight path marker | flight director | air brakes) (on | off)					|
+				say (speed | altitude)															;
+				
+				
+<prepardedCommandsForOptionalExtensions> =
+				propeller <number>	rpm															|
+				set (heading | course) <number> 												|
+				(com | nav) (one | two) (set <number> | standby <number> | switch frequency)	|
+				(climb | cruise | descend | approach | final) check								|		
+				say (fuel | endurance)  												|
+				autopilot (on | off)															|
+				(speed | heading) <number>														|
+				turn (left | right) heading <number>											;
+					
+			 	
+			 
+<commandss> = <words>+;
+                 
+<words> = 	air brakes		|
+			altitude		|
+			approach		|
+			arm				|
+			autopilot		|
+			check			|
+			climb			|
+			com				|
+			confirm			|
+			course			|
+			cruise			|
+			decimal			|
+			descend			|
+			down			|
+			endurance		|
+			feet			|
+			final			|
+			flaps			|
+			flight director	|
+			flight level	|
+			fly				|
+			frequency		|
+			fuel			|
+			gear			|
+			heading			|
+			high			|
+			indent			|
+			left			|
+			minus			|
+			mode			|
+			nav				|
+			off				|
+			on				|
+			parking brakes	|
+			percent			|
+			plus			|
+			point			|
+			power			|
+			propeller		|
+			right			|
+			rpm				|
+			say				|
+			select			|
+			set				|
+			speed			|
+			squawk			|
+			standby			|
+			switch			|
+			turn			|
+			unable			|
+			up				|
+			vertical		;	
+
+<alphabet> = 	alfa		|
+				bravo		|
+				charlie		|
+				delta		|
+				echo		|
+				foxtrot		|
+				golf		|
+				hotel		|
+				india		|
+				juliett		|
+				kilo		|
+				lima		|
+				mike		|
+				november	|
+				oscar		|
+				papa		|
+				quebec		|
+				romeo		|
+				sierra		|
+				tango		|
+				uniform		|
+				victor		|
+				whiskey		|
+				xray		|
+				yankee		|
+				zulu		;			
+			
+public <command> = <commands>;

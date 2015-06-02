@@ -1,0 +1,35 @@
+#JSGF V1.0;
+
+grammar dialog;
+
+<digit> = zero  |
+          one   |
+          two   |
+          three |
+          four  |
+          five  |
+          six   |
+          seven |
+          eight |
+          nine  ;
+
+<number> = <digit>+ [point <digit>+];
+
+public <commands> = 	flaps (approach | up | full)													|
+				gear (up | down)																|
+				power <number>																	|
+				set (climb | cruise | take off | idle) power									|
+				(flight path marker | flight director | air brakes) (on | off)					|
+				say (speed | altitude)															;
+				
+				
+<prepardedCommandsForOptionalExtensions> =
+				propeller <number>	rpm															|
+				set (heading | course) <number> 												|
+				(com | nav) (one | two) (set <number> | standby <number> | switch frequency)	|
+				(climb | cruise | descend | approach | final) check								|		
+				say (fuel | endurance)  												|
+				autopilot (on | offline)															|
+				(speed | heading) <number>														|
+				turn (left | right) heading <number>											;
+					
