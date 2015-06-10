@@ -1,48 +1,17 @@
 /*
-	ZeroFour by HTML5 UP
+	Verti by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-$(document).ready(function() {
-
-  $("#carousel").owlCarousel({
-
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true
-
-      // "singleItem:true" is a shortcut for:
-      // items : 1,
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
-
-  });
-
-	var cw = $('.video').width();
-	cw /= 1.6;
-	$('.video').css({'height':cw+'px'});
-
-});
-
 (function($) {
 
-	skel
-		.breakpoints({
-			desktop: '(min-width: 737px)',
-			tablet: '(min-width: 737px) and (max-width: 1200px)',
-			mobile: '(max-width: 736px)'
-		})
-		.viewport({
-			breakpoints: {
-				tablet: {
-					width: 1080
-				}
-			}
-		});
+	skel.breakpoints({
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)'
+	});
 
 	$(function() {
 
@@ -56,34 +25,30 @@ $(document).ready(function() {
 				$body.removeClass('is-loading');
 			});
 
-
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
-		// Dropdowns.
-			$('#nav > ul').dropotron({
-				offsetY: -22,
-				mode: 'fade',
-				noOpenerFade: true,
-				speed: 300,
-				detach: false
+		// Prioritize "important" elements on medium.
+			skel.on('+medium -medium', function() {
+				$.prioritize(
+					'.important\\28 medium\\29',
+					skel.breakpoint('medium').active
+				);
 			});
 
-		// Prioritize "important" elements on mobile.
-			skel.on('+mobile -mobile', function() {
-				$.prioritize(
-					'.important\\28 mobile\\29',
-					skel.breakpoint('mobile').active
-				);
+		// Dropdowns.
+			$('#nav > ul').dropotron({
+				mode: 'fade',
+				noOpenerFade: true,
+				speed: 300
 			});
 
 		// Off-Canvas Navigation.
 
-			// Title Bar.
+			// Navigation Toggle.
 				$(
-					'<div id="titleBar">' +
+					'<div id="navToggle">' +
 						'<a href="#navPanel" class="toggle"></a>' +
-						'<span class="title">' + $('#logo').html() + '</span>' +
 					'</div>'
 				)
 					.appendTo($body);
@@ -110,7 +75,7 @@ $(document).ready(function() {
 
 			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
 				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-					$('#titleBar, #navPanel, #page-wrapper')
+					$('#navToggle, #navPanel, #page-wrapper')
 						.css('transition', 'none');
 
 	});

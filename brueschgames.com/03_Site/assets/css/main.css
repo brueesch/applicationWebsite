@@ -1402,6 +1402,17 @@
 				width: auto;
 			}
 
+/* Video */
+
+.video {
+	display: block;
+	width: 100%;
+	margin: 0 0 2.5em 0;
+}
+
+.socialIcons li {
+	display: inline;
+}
 /* Button */
 
 	input[type="button"],
@@ -1718,13 +1729,23 @@
 /* Wrappers */
 
 	#header-wrapper {
-		background: url("images/bg01.png"), url("../../images/header.jpg");
+		/*background: url("images/bg02.png");*/
+		background: #f2f2f2;
 		background-position: top left, center center;
 		background-size: auto, cover;
 	}
 
 	#main-wrapper {
-		background: #fff;
+		background: #f2f2f2;
+	}
+
+	#carousel .item img{
+    display: block;
+    width: 95%;
+    height: auto;
+		margin-top: 20px;
+		margin-left: auto;
+		margin-right:auto;
 	}
 
 	#footer-wrapper {
@@ -1746,11 +1767,11 @@
 	.wrapper.style1 {
 		position: relative;
 		text-shadow: 1px 1px 0 #fff;
-		background-color: #fff;
-		background-image: url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
+		background-color: #f2f2f2;
+	/*	background-image: url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
 		background-repeat: no-repeat, no-repeat, repeat;
 		background-size: 100% 15em, 100% 15em, auto auto;
-		background-position: top center, bottom center, top left;
+		background-position: top center, bottom center, top left;*/
 	}
 
 	.wrapper.style3 {
